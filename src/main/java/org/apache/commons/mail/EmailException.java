@@ -85,8 +85,8 @@ public class EmailException
      * Prints the stack trace of this exception to the standard error stream.
      */
     @Override
-    public void printStackTrace()
-    {
+    public void printStackTrace() {
+        Radek.addInts(1, 2);
         printStackTrace(System.err);
     }
 
