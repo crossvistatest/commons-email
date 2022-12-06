@@ -77,8 +77,7 @@ public class EmailException
      * @param rootCause  the exception or error that caused this exception
      *                   to be thrown.
      */
-    public EmailException(final String msg, final Throwable rootCause)
-    {
+    public EmailException(final String msg, final Throwable rootCause) {
         super(msg, rootCause);
     }
 
@@ -86,8 +85,8 @@ public class EmailException
      * Prints the stack trace of this exception to the standard error stream.
      */
     @Override
-    public void printStackTrace()
-    {
+    public void printStackTrace() {
+        Radek.addInts(1, 2);
         printStackTrace(System.err);
     }
 
@@ -121,5 +120,16 @@ public class EmailException
         {
             super.printStackTrace(out);
         }
+    }
+
+    private static final String PROPERTY = "abc";
+
+    public static Integer addInts(int a, int b) {
+        //add ints
+        if(PROPERTY.equalsIgnoreCase("ABC")) {
+            return a+b;
+        }
+
+        return 0;
     }
 }
