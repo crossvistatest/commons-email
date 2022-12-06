@@ -383,4 +383,18 @@ public class EmailLiveTest extends AbstractEmailTest
         EmailUtils.writeMimeMessage( new File("./target/test-emails/partialmail.eml"), send(email).getMimeMessage());
     }
 
+    @Test
+    public void testPartialSendSagal() throws Exception
+    {
+        final SimpleEmail email = (SimpleEmail) create(SimpleEmail.class);
+        email.addTo(EmailConfiguration.TEST_TO);
+        email.addTo("nobody@is.invalid");
+        email.setSubject("TestPartialMail");
+        email.setMsg("This is a test mail ... :-)");
+
+        email.setSendPartial(true);
+
+        EmailUtils.writeMimeMessage( new File("./target/test-emails/partialmail.eml"), send(email).getMimeMessage());
+    }
+
 }
