@@ -1,5 +1,8 @@
 package org.apache.commons.mail;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Radek {
     private static final String PROPERTY = "abc";
 
@@ -10,5 +13,10 @@ public class Radek {
         }
 
         return 0;
+    }
+
+    public Radek() {
+        List<String> aaa = new ArrayList<>();
+
     }
 }
