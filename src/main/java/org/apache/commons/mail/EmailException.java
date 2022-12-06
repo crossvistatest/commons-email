@@ -77,8 +77,7 @@ public class EmailException
      * @param rootCause  the exception or error that caused this exception
      *                   to be thrown.
      */
-    public EmailException(final String msg, final Throwable rootCause)
-    {
+    public EmailException(final String msg, final Throwable rootCause) {
         super(msg, rootCause);
     }
 
