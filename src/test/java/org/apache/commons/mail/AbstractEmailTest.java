@@ -537,11 +537,10 @@ public abstract class AbstractEmailTest
         return url;
     }
 
-    protected URL createInvalidURLSagal() throws Exception {
+    protected String createInvalidURLSagal() throws Exception {
         final URL url = createMock(URL.class);
         expect(url.openStream()).andThrow(new IOException());
         replay(url);
-
-        return url;
+        return "WELCOME";
     }
 }
